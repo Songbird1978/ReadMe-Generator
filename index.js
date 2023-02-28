@@ -3,10 +3,9 @@
 
 import inquirer from 'inquirer';
 import fs from 'fs';
-import path from 'path';
+//import path from 'path';
 
-
-const generateMarkdown = require("./utils/generateMarkdown.js");
+import {generateMarkdown} from '/utils/generateMarkdown.js';
 
 // array of questions for user
 const questions = [
@@ -15,6 +14,7 @@ const questions = [
         message: 'What is the name of your project?',
         name: 'name',
     },
+
     {
         type: 'input',
         message: 'Write a description of your project? What is the purpose of your project?',
@@ -23,19 +23,14 @@ const questions = [
     {
         type: 'input',
         message: 'Have you faced any challenges in development and how have you overcome these?',
-        name: 'Challenges',
+        name: 'challenges',
     },
     {
         type: 'input',
         message: 'What features do you hope to implement in the future?',
-        name: 'Future',
+        name: 'future',
     },
-    
-    {
-        type: 'input',
-        message: 'List a table of Contents for this README (optional)',
-        name: 'tableOfContents',
-    },
+
     {
         type: 'input',
         message: 'How do you install your project?',
@@ -57,7 +52,6 @@ const questions = [
         message: 'Who are your collaborators and contributors?',
         name: 'credits',
     },
-    
     {
         type: 'input',
         message: 'How can others contribute?',
@@ -71,12 +65,12 @@ const questions = [
     {
         type: 'input',
         message: 'What is your Github Username URL?',
-        name: 'gitHub',
+        name: 'username',
     },
     {
         type: 'input',
-        message: 'What is the URL of this project?',
-        name: 'projectUrl',
+        message: 'What is the URL of this repo?',
+        name: 'profile',
     },
     {
         type: 'input',
@@ -86,24 +80,26 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
+// function writeToFile(response) {
 
-  
-}
+
+// }
 
 // function to initialize program
 function init() {
 
     inquirer.prompt(questions)
 
-    .then((response) => {
-        console.log(response);
-        fs.writeFile(`README.md`, `## Answers \n \n ${response.data}`, (error) =>
-        error ? console.error(error) : console.log(`Check your README file. Your file should be finished.`)
-        );
-    });
+        .then((response) => {
+            console.log(response);
 
+            const markdownTemplate = generateMarkdown(response);
 
+            fs.writeFile(`README.md`, markdownTemplate, (error) =>
+                error ? console.error(error) : console.log(`Check your README file. Your file should be finished.`)
+            );
+
+        });
 
 }
 
