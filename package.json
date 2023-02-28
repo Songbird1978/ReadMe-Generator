@@ -1,0 +1,26 @@
+{
+  "name": "readmegenerator",
+  "version": "1.0.0",
+  "description": "Create a professional ReadMe file from useful prompts in node.js. Results are displayed on a README.md file with working links to areas of the document, and the user's personal contact information and applicable accounts.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Songbird1978/ReadMeGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Songbird1978/ReadMeGenerator/issues"
+  },
+  "homepage": "https://github.com/Songbird1978/ReadMeGenerator#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^9.1.4",
+    "path": "^0.12.7"
+  }
+}
