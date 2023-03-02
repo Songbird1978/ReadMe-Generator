@@ -1,6 +1,6 @@
 
   
-# fjsdaklfjdsla
+# Readme Generator 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -21,20 +21,19 @@
    
 ## Description:<br> 
 
-
-fdjskal<br>
+This application creates a detailed and professional README file using node and inquirer to create prompts and validation, which require the user to complete all the information necessary to generate a readme file. It includes links to internal sections of the file and license information and badges.<br>
 
 ## Challenges:<br> 
 
-fdsjak<br>
+The main challenges I faced were in my own learning curve and research.<br>
 
 ## Future Ideas:<br> 
 
-fdjskal<br>
+None at this time.<br>
 
 ## Installation:<br>  
 
-fjdksal
+You must install node. Once in the repo, you must install inquirer, fs and moment.js
    
 ## Usage: <br> 
 
@@ -44,7 +43,7 @@ undefined
 
 This application is licensed under : undefined
 
-Copyright 2023 fdjsakljdfsa
+Copyright 2023 Hayley Callender
 
 Licensed under the undefined (the "License");
 you may not use this file except in compliance with the License.
@@ -61,24 +60,24 @@ limitations under the License.
 
 ## Credits:<br> 
 
-fjdkla
+None.
   
 ## Contribution: <br> 
 
-fdjksla
+Send me an email.
   
 ## Tests:<br> 
 
-fdjksal
+Many whilst developing using console.log
 
 ## Username:<br> 
 
-fdjksal<br> 
+https://github.com/Songbird1978<br> 
   
 ## Profile: <br> 
 
-fjkdal<br> 
+https://github.com/Songbird1978/ReadMeGenerator<br> 
 
 ## Questions:<br> 
 
-If you have any questions about this project, please contact me at fdjksal.
+If you have any questions about this project, please contact me at hayleyalkerpiano@gmail.com.

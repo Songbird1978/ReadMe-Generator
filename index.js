@@ -1,12 +1,11 @@
 
-
+//importing inquirer and fs for the javascript files - already installed using node
 
 import inquirer from 'inquirer';
 import fs from 'fs';
-//import path from 'path';
-
+//importing function from 2nd javascript document
 import { generateMarkdown } from './utils/generateMarkdown.js';
-//import { createBadges } from './utils/generateMarkdown.js';
+
 
 // array of questions for user
 const questions = [
@@ -14,6 +13,7 @@ const questions = [
         type: 'input',
         message: 'What is the name of your project?',
         name: 'name',
+        //validation to ensure input  by user
         validate: (value)=> {if(value){return true}else{return "Please input your response."}},
     },
     {
@@ -59,7 +59,7 @@ const questions = [
 
     },
     {
-        type: 'list',
+        type: 'list', //lists the choices
         message: 'What license does your project use?',
         name: 'license',
         choices: ['MIT', 'apache 2.0', 'creative commons', 'none'],
@@ -109,13 +109,8 @@ const questions = [
     },
 ];
 
-// function to write README file
-// function writeToFile(response) {
 
-
-// }
-
-// function to initialize program
+// function to initialize program and write the README file
 function init() {
 
     inquirer.prompt(questions)
@@ -128,8 +123,7 @@ function init() {
 
             fs.writeFile(`README.md`,  markdownTemplate, (error) =>
                 error ? console.error(error) : console.log(`Check your README file. Your file should be finished.`)
-            );
-             
+            );   
         });
 
 }

@@ -1,4 +1,8 @@
+//importing moment.js for date in license - install npm i moment.js
+
 import moment from 'moment';
+
+//function to create the badges for the license
 
 function createLicenseBadge(license) {
 
@@ -16,7 +20,7 @@ function createLicenseBadge(license) {
 }
 
 
-// function to generate markdown for README
+// function to generate markdown for README and links to all areas of the project
 function generateMarkdown(response) {
 
   return `
@@ -108,5 +112,5 @@ If you have any questions about this project, please contact me at ${response.qu
 
 export { generateMarkdown };
 
-//export { createBadges };
+
 
